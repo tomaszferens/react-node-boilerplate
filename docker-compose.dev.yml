@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+    frontend:
+        build:
+            dockerfile: ./frontend/dev.Dockerfile
+
+    backend:
+        build:
+            dockerfile: ./backend/dev.Dockerfile
+
+    nginx:
+        build:
+            args:
+                - nginx_file=nginx/nginx.dev.conf
+        ports:
+            - 8080:8080

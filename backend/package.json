@@ -1,0 +1,26 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon",
+    "start": "ts-node src/server",
+    "prettier": "prettier --config ../.prettierrc \"**/**.ts\" --write"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.16.0",
+    "nodemon": "^1.18.4",
+    "prettier": "^1.14.2",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "typescript": "^3.0.3"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

@@ -1,0 +1,24 @@
+gzip on;
+
+gzip_types
+    application/atom+xml
+    application/javascript
+    application/x-javascript
+    application/json
+    application/rss+xml
+    application/vnd.ms-fontobject
+    application/x-font-ttf
+    application/x-web-app-manifest+json
+    application/xhtml+xml
+    application/xml
+    font/opentype
+    image/svg+xml
+    image/svg
+    image/x-icon
+    text/css
+    text/plain
+    text/x-component;
+
+gzip_proxied no-cache no-store private expired auth;
+gzip_min_length 500;
+gzip_vary on;

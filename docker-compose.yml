@@ -1,0 +1,29 @@
+version: "3.7"
+services:
+
+    frontend:
+        container_name: FRONTEND
+        build:
+            context: .
+        volumes:
+            - ./frontend:/frontend
+            - data:/shared
+
+    backend:
+        container_name: BACKEND_API
+        build:
+            context: .
+        volumes:
+            - ./backend:/backend
+
+    nginx:
+        container_name: NGINX
+        build:
+            context: .
+            dockerfile: ./nginx/Dockerfile
+        volumes:
+            - ./nginx/gzip_params:/etc/nginx/gzip_params:cached
+            - data:/shared
+
+volumes:
+    data:
